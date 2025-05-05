@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import hexMap from '../assets/map.png';
 
+// Add India marker (adjust position as needed)
 const markers = [
-  { id: 1, top: '32%', left: '24%' },
-  { id: 2, top: '60%', left: '32%' },
-  { id: 3, top: '30%', left: '63%' },
+  { id: 1, top: '32%', left: '24%', label: 'NEW YORK' },
+  { id: 2, top: '60%', left: '32%', label: 'AUSTRALIA' },
+  { id: 3, top: '30%', left: '63%', label: 'GERMANY' },
+  { id: 4, top: '45%', left: '53%', label: 'INDIA' }, // India marker
 ];
 
 const EnvelopePopup = ({ label }) => (
@@ -31,7 +33,7 @@ const Worldwide = () => {
           className="relative h-[550px] w-full bg-center bg-no-repeat bg-contain"
           style={{ backgroundImage: `url(${hexMap})` }}
         >
-          {markers.map(({ id, top, left }) => (
+          {markers.map(({ id, top, left, label }) => (
             <div
               key={id}
               className="absolute flex flex-col items-center"
@@ -42,7 +44,7 @@ const Worldwide = () => {
                 className="h-4 w-4 bg-[#cba97c] rounded-full shadow-md cursor-pointer"
               ></div>
 
-              {activeMarker === id && <EnvelopePopup label="NEW YORK" />}
+              {activeMarker === id && <EnvelopePopup label={label} />}
             </div>
           ))}
         </div>
