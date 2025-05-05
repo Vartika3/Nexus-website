@@ -8,7 +8,7 @@ const markers = [
 ];
 
 const EnvelopePopup = ({ label }) => (
-  <div className="absolute -top-12 left-[-30px] bg-black/80 backdrop-blur-sm rounded-xl px-4 py-2 text-[10px] text-[#cba97c] font-semibold tracking-wider uppercase shadow-lg w-max">
+  <div className="absolute -top-12 left-[-30px] bg-[#212121] backdrop-blur-sm rounded-xl px-4 py-2 text-[10px] text-[#cba97c] font-semibold tracking-wider uppercase shadow-lg w-max">
     {label}
   </div>
 );
@@ -21,9 +21,9 @@ const Worldwide = () => {
   };
 
   return (
-    <section id="worldwide" className="py-20 bg-black text-white">
+    <section id="worldwide" className="py-20 bg-[#212121] text-white">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold tracking-widest mb-12">
+        <h2 className="text-4xl font-medium tracking-[.2rem] mb-12">
           WE ARE <span className="text-[#cba97c]">WORLDWIDE</span>
         </h2>
 
